@@ -1,0 +1,17 @@
+PROCEDURE dot_product(V1, V2)
+VAR ps : INTEGER  := 0;
+ VAR i: INTEGER;
+BEGIN
+ FOR i FROM 0 TO 2 STEP 1  DO
+ ps = ps + V1[i] * V2[i];
+  END_FOR
+Write(ps) 
+END
+ALGORITHM test_ps
+BEGIN
+  IF (dot_product(V1, V2) = 0 )  THEN
+  write("the two vectors are orthogonal")
+  ELSE
+   write("the two vectors are not orthogonal")
+  END_IF
+END
