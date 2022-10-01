@@ -1,0 +1,25 @@
+FUNCTION insertion_Sort(arr : ARRAY_OF INTEGER) : ARRAY_OF INTEGER
+VAR
+    i,j,initial:INTEGER
+BEGIN
+    FOR i from 1 To arr.length STEP 1 DO 
+     j := i - 1;
+    initial := arr[i];
+    WHILE (j>=0 AND arr[j]>initial) DO 
+    arr[j+1] = arr[j]
+    j--
+    END_WHILE
+    arr[j+1] = initial
+    END_FOR
+    RETURN arr ;
+END
+
+ALGORITHM orth_vectors
+VAR
+    arr : ARRAY_OF INTEGER;
+BEGIN
+write("Enter an array :")
+read(arr)
+write("the sorted array is", insertion_Sort(arr))    
+END
+
